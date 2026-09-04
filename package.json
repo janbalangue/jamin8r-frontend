@@ -1,0 +1,28 @@
+{
+  "name": "jamin8r-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Proprietary frontend monorepo for Jamin8r web and mobile clients.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "npm@10.9.2",
+  "scripts": {
+    "dev:web": "npm run dev -w @jamin8r/web",
+    "dev:mobile": "npm run start -w @jamin8r/mobile",
+    "ios": "npm run ios -w @jamin8r/mobile",
+    "android": "npm run android -w @jamin8r/mobile",
+    "build:web": "npm run build -w @jamin8r/web",
+    "test": "node --experimental-strip-types --test packages/api-client/src/client.test.ts packages/design/src/tokens.test.ts",
+    "typecheck:shared": "tsc --noEmit -p packages/contracts/tsconfig.json && tsc --noEmit -p packages/api-client/tsconfig.json && tsc --noEmit -p packages/design/tsconfig.json",
+    "verify:static": "node scripts/verify-static.mjs",
+    "verify": "npm run verify:static && npm test && npm run typecheck:shared"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.3"
+  }
+}

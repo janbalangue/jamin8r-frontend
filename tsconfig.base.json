@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@jamin8r/contracts": ["./packages/contracts/src/index.ts"],
+      "@jamin8r/api-client": ["./packages/api-client/src/index.ts"],
+      "@jamin8r/design": ["./packages/design/src/index.ts"]
+    },
+    "verbatimModuleSyntax": true
+  }
+}

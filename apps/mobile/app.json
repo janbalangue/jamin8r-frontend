@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Jamin8r",
+    "slug": "jamin8r",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.jamin8r.mobile" },
+    "android": { "package": "com.jamin8r.mobile" }
+  }
+}
